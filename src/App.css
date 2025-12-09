@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+html,
+body,
+#root {
+  height: 100%;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --white: #ffffff;
+  --offWhite: #f8f9fa;
+  --ltGray: #d6dbe6;
+  --drkGray: ##525868;
+  --cardBlue: #1f2535;
+  --navy: #050b21;
+  --black: #000000;
+  --red: #df473f;
+  --font: "Roboto", sans-serif;
+}
+body {
+  font-family: var(--font);
+  background-color: var(--navy);
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.card {
+  border: 1px solid var(--offWhite);
+  padding: 20px;
+  border-radius: 10px;
+  color: var(--offWhite);
+  background-color: var(--cardBlue);
+}
