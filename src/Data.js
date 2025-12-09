@@ -90,3 +90,5 @@ let data = [
     isActive: true,
   },
 ];
+
+export default data;
