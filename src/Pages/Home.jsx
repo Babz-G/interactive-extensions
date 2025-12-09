@@ -11,6 +11,7 @@ function Home() {
       {allItems.map((oneItem) => {
         return (
           <Card
+            logo={oneItem.logo}
             name={oneItem.name}
             description={oneItem.description}
             key={oneItem.id}
