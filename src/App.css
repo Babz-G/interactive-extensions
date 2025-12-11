@@ -18,7 +18,7 @@ html {
   --white: #ffffff;
   --offWhite: #f8f9fa;
   --ltGray: #d6dbe6;
-  --drkGray: ##525868;
+  --drkGray: #525868;
   --cardBlue: #1f2535;
   --navy: #050b21;
   --black: #000000;
@@ -28,6 +28,9 @@ html {
 body {
   font-family: var(--font);
   background-color: var(--navy);
+}
+h1 {
+  color: var(--white);
 }
 .card-container {
   display: grid;
@@ -40,4 +43,27 @@ body {
   border-radius: 10px;
   color: var(--offWhite);
   background-color: var(--cardBlue);
+}
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+button {
+  background-color: var(--drkGray);
+  border-radius: 20px;
+  gap: 10px;
+  color: var(--white);
+  padding: 12px 20px;
+  border: none;
+  font-size: 1em;
+}
+button:hover {
+  background-color: var(--red);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
