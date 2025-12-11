@@ -27,6 +27,7 @@ function Home() {
       return allItems.filter((oneItem) => oneItem.isActive === false);
     }
   }
+  function toggle(id) {}
   return (
     <div>
       <div className="header">
@@ -45,6 +46,8 @@ function Home() {
               name={oneItem.name}
               description={oneItem.description}
               key={oneItem.id}
+              isActive={oneItem.isActive}
+              onToggle={() => toggle(oneItem.id)}
             >
               {/* <h3>{oneItem.name}</h3>
             <p>{oneItem.description}</p> */}
