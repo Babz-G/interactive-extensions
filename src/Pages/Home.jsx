@@ -27,7 +27,19 @@ function Home() {
       return allItems.filter((oneItem) => oneItem.isActive === false);
     }
   }
-  function toggle(id) {}
+  function toggle(id) {
+    const updatedItems = allItems.map((item) => {
+      if (item.id === id) {
+        return { ...item, isActive: !item.isActive };
+      }
+      return item;
+    });
+    setAllItems(updatedItems);
+  }
+  function removeCard(id) {
+    const remainingItems = allItems.filter((item) => item.id !== id);
+    setAllItems(remainingItems);
+  }
   return (
     <div>
       <div className="header">
@@ -47,11 +59,9 @@ function Home() {
               description={oneItem.description}
               key={oneItem.id}
               isActive={oneItem.isActive}
-              onToggle={() => toggle(oneItem.id)}
-            >
-              {/* <h3>{oneItem.name}</h3>
-            <p>{oneItem.description}</p> */}
-            </Card>
+              toggle={() => toggle(oneItem.id)}
+              remove={() => removeCard(oneItem.id)}
+            ></Card>
           );
         })}
       </div>
