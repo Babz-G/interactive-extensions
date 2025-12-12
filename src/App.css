@@ -36,10 +36,11 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  padding: 0 40px;
 }
 .card {
   border: 1px solid var(--offWhite);
-  padding: 20px;
+  padding: 15px;
   border-radius: 10px;
   color: var(--offWhite);
   background-color: var(--cardBlue);
@@ -66,4 +67,36 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  padding: 0 40px;
+}
+.cardInfo {
+  display: flex;
+  /* flex-direction: column; */
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.cardButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* .cardText {
+  display: flex;
+  flex-directions: column;
+  gap: 8px;
+} */
+.card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+}
+.card h3 {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+.card p {
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.4;
 }
