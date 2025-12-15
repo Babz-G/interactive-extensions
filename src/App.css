@@ -21,13 +21,14 @@ html {
   --drkGray: #525868;
   --cardBlue: #1f2535;
   --navy: #050b21;
+  --bckgrnBlue: #091337;
   --black: #000000;
   --red: #df473f;
   --font: "Roboto", sans-serif;
 }
 body {
   font-family: var(--font);
-  background-color: var(--navy);
+  background-color: var(--bckgrnBlue);
 }
 h1 {
   color: var(--white);
@@ -37,6 +38,8 @@ h1 {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 0 40px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 .card {
   border: 1px solid var(--offWhite);
@@ -44,6 +47,7 @@ h1 {
   border-radius: 10px;
   color: var(--offWhite);
   background-color: var(--cardBlue);
+  /* max-width: 375px; */
 }
 .buttons {
   display: flex;
@@ -66,12 +70,12 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
   padding: 0 40px;
+  max-width: 1400px;
 }
 .cardInfo {
   display: flex;
-  /* flex-direction: column; */
   gap: 10px;
   margin-bottom: 15px;
 }
@@ -80,11 +84,6 @@ button:hover {
   justify-content: space-between;
   align-items: center;
 }
-/* .cardText {
-  display: flex;
-  flex-directions: column;
-  gap: 8px;
-} */
 .card img {
   width: 70px;
   height: 70px;
@@ -93,10 +92,76 @@ button:hover {
 .card h3 {
   margin: 0;
   margin-bottom: 5px;
-  font-size: 1.2em;
+  font-size: 1.6em;
 }
 .card p {
   margin: 0;
-  font-size: 0.9em;
+  font-size: 0.7em;
   line-height: 1.4;
+}
+@media (max-width: 600px) {
+  .card-container {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    max-width: 1400px;
+    margin: 0 auto 20px auto;
+  }
+  button {
+    padding: 10px 16px;
+    font-size: 0.9em;
+  }
+}
+.bonus-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  background-color: var(--cardBlue);
+  margin: 0 40px 20px 40px;
+  color: var(--white);
+  border-radius: 15px;
+  max-width: 1400px;
+}
+.bonus-header h2 {
+  font-size: 1.2em;
+}
+.bonus-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.header-buttons {
+  display: flex;
+  gap: 10px;
+}
+.light {
+  background-color: var(--offWhite);
+}
+.light h1,
+.light h2,
+.light h3,
+.light p {
+  color: var(--black);
+}
+.light .card {
+  background-color: var(--white);
+  border-color: var(--ltGray);
+}
+.light .bonus-header {
+  background-color: var(--ltGray);
+}
+.logo-section img {
+  width: 40px;
+  height: 40px;
+}
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

@@ -6,6 +6,7 @@ import Button from "../Components/Button.jsx";
 function Home() {
   const [allItems, setAllItems] = useState(data);
   const [status, setStatus] = useState("all");
+  const [theme, setTheme] = useState("dark");
   function handleAllClick() {
     console.log("Button 1 is clickable!");
     setStatus("all");
@@ -40,8 +41,22 @@ function Home() {
     const remainingItems = allItems.filter((item) => item.id !== id);
     setAllItems(remainingItems);
   }
+  function toggleTheme() {
+    setTheme(theme === "dark" ? "light" : "dark");
+  }
   return (
-    <div>
+    <div className={`bonus-container ${theme}`}>
+      <div className="bonus-header">
+        {" "}
+        <div className="logo-section">
+          <img src="/public/assets/images/logo.png" alt="Logo" />
+          <h2>Extensions</h2>
+        </div>
+        <div className="header-buttons">
+          <Button buttonText="☀️" onClick={toggleTheme} />
+          <Button buttonText="+ Add Extension" onClick={() => {}} />
+        </div>
+      </div>
       <div className="header">
         <h1>Extensions List</h1>
         <div className="buttons">
