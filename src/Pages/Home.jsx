@@ -2,11 +2,14 @@ import data from "../Data.js";
 import { useState } from "react";
 import Card from "../Components/Card.jsx";
 import Button from "../Components/Button.jsx";
+import Form from "../Components/Form.jsx";
 
 function Home() {
   const [allItems, setAllItems] = useState(data);
   const [status, setStatus] = useState("all");
   const [theme, setTheme] = useState("dark");
+  const [addEx, setAddEx] = useState(false);
+  const [newExt, setNewExt] = useState({ name: "", description: "" });
   function handleAllClick() {
     console.log("Button 1 is clickable!");
     setStatus("all");
@@ -44,6 +47,25 @@ function Home() {
   function toggleTheme() {
     setTheme(theme === "dark" ? "light" : "dark");
   }
+  function openAddEx() {
+    console.log("Form is opening", true);
+    setAddEx(true);
+  }
+  function handleForm(field, value) {
+    setNewExt({ ...newExt, [field]: value });
+  }
+  function submitForm() {
+    const newExtension = {
+      id: allItems.length + 1,
+      name: newExt.name,
+      description: newExt.description,
+      logo: "public/assets/images/browser-extension-icon.jpg",
+      isActive: false,
+    };
+    setAllItems([...allItems, newExtension]);
+    setNewExt({ name: "", description: "" });
+    setAddEx(false);
+  }
   return (
     <div className={`bonus-container ${theme}`}>
       <div className="bonus-header">
@@ -54,7 +76,7 @@ function Home() {
         </div>
         <div className="header-buttons">
           <Button buttonText="☀️" onClick={toggleTheme} />
-          <Button buttonText="+ Add Extension" onClick={() => {}} />
+          <Button buttonText="+ Add Extension" onClick={openAddEx} />
         </div>
       </div>
       <div className="header">
@@ -80,6 +102,15 @@ function Home() {
           );
         })}
       </div>
+      {addEx && (
+        <div className="add-form">
+          <Form
+            newExt={newExt}
+            handleForm={handleForm}
+            submitForm={submitForm}
+          />
+        </div>
+      )}
     </div>
   );
 }
