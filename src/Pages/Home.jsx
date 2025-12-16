@@ -48,7 +48,7 @@ function Home() {
     setTheme(theme === "dark" ? "light" : "dark");
   }
   function openAddEx() {
-    console.log("Form is opening", true);
+    // console.log("Form is opening", true);
     setAddEx(true);
   }
   function handleForm(field, value) {
@@ -59,7 +59,7 @@ function Home() {
       id: allItems.length + 1,
       name: newExt.name,
       description: newExt.description,
-      logo: "public/assets/images/browser-extension-icon.jpg",
+      logo: "/assets/browser-extension-icon.jpg",
       isActive: false,
     };
     setAllItems([...allItems, newExtension]);
@@ -71,7 +71,8 @@ function Home() {
       <div className="bonus-header">
         {" "}
         <div className="logo-section">
-          <img src="/public/assets/images/logo.png" alt="Logo" />
+          <img src="/assets/logo.png" alt="Logo" />
+          {/* here */}
           <h2>Extensions</h2>
         </div>
         <div className="header-buttons">
