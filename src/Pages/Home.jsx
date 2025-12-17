@@ -59,7 +59,8 @@ function Home() {
       id: allItems.length + 1,
       name: newExt.name,
       description: newExt.description,
-      logo: "/assets/browser-extension-icon.jpg",
+      logo: "/assets/images/browser-extension-icon.jpg",
+      /* whyyyyyy!?!?! */
       isActive: false,
     };
     setAllItems([...allItems, newExtension]);
@@ -71,8 +72,8 @@ function Home() {
       <div className="bonus-header">
         {" "}
         <div className="logo-section">
-          <img src="/assets/logo.png" alt="Logo" />
-          {/* here */}
+          <img src="/assets/images/logo.png" alt="Logo" />
+          {/* whyyyyyy!?!?! */}
           <h2>Extensions</h2>
         </div>
         <div className="header-buttons">
