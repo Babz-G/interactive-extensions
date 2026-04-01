@@ -25,12 +25,16 @@ An interactive browser extension manager built with React. Users can view a list
 ## 🖼️ Screenshots
 
 **Dark Mode**
+<img width="1330" height="694" alt="Screenshot 2026-04-01 at 3 25 52 PM" src="https://github.com/user-attachments/assets/556faf69-db04-468c-b84d-7f4531bba2d4" />
 
 **Light Mode**
+<img width="1260" height="700" alt="Screenshot 2026-04-01 at 3 26 00 PM" src="https://github.com/user-attachments/assets/7aa7fa3e-5d74-44ba-a993-ba2992696123" />
 
 **Add Extension Modal**
+<img width="1328" height="690" alt="Screenshot 2026-04-01 at 3 26 16 PM" src="https://github.com/user-attachments/assets/e7d11082-9e9e-41b8-be17-4ece78abba81" />
 
 **Inactive Filter View**
+<img width="1322" height="679" alt="Screenshot 2026-04-01 at 3 26 43 PM" src="https://github.com/user-attachments/assets/eb0091f4-0514-4153-9481-01c7fcaeab99" />
 
 ---
 
